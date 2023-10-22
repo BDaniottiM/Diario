@@ -87,7 +87,7 @@ function ResultadoCadete() {
   var quantidade = parseInt(document.getElementById("quantidade_Cadet").value);
   var resultados = "";
   resultados +=
-    "<code>```diff<br>+ Curso de formação de " +
+    "<code>```diff<br>+ Curso de Formação de " +
     cursoOficial +
     "<br><br></code>";
   for (var i = 0; i < quantidade; i++) {
