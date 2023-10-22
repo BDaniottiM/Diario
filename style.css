@@ -1,3 +1,4 @@
+/* Estilos para o corpo da página */
 body {
   background-color: #073763;
   font-family: "Quicksand", sans-serif;
@@ -5,22 +6,24 @@ body {
   text-align: center;
 }
 
+/* Estilos para botões gerais */
 button {
   background-color: white;
-  color: #03193c;
+  color: #073763; /* Cor do botão */
   font-family: "Quicksand", sans-serif;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
   margin: 5px;
-  border-radius: 5px;
 }
 
 button:hover {
-  background-color: #03193c;
+  background-color: #03193d; /* Cor do botão ao passar o mouse */
   color: white;
 }
 
+/* Estilos para o elemento de output */
 #output {
   display: none; /* Oculta o elemento inicialmente */
   width: 50%;
@@ -29,14 +32,121 @@ button:hover {
   padding: 10px;
   border: 2px solid #bf9000; /* Adiciona a borda na cor #bf9000 */
   border-radius: 5px; /* Arredonda os cantos da borda */
-  background-color: rgba(3, 25, 60, 150);
+  background-color: rgba(3, 25, 60, 0.6); /* Fundo com opacidade */
 }
 
+/* Estilos para a imagem de fundo */
 #background-image {
-  position: absolute;
+  position: fixed; /* Corrige a posição da imagem no canto inferior direito */
   bottom: 0;
   right: 0;
   opacity: 0.8;
   z-index: -1;
   width: 20%;
+}
+
+/* Estilos para o pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #073763; /* Cor de fundo desejada */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o botão de fechar o pop-up */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: white; /* Cor do ícone de fechamento */
+  cursor: pointer;
+}
+
+/* Estilos para o botão do pop-up */
+#customPopupContent button {
+  background-color: white;
+  color: #073763;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#customPopupContent button:hover {
+  background-color: #073763;
+  color: white;
+}
+
+/* Estilos para o output do pop-up */
+#popupOutput {
+  margin: 10px 0;
+  color: white; /* Cor do texto do output */
+}
+.Popup-Cadete {
+  position: static;
+  width: 25%;
+  margin: 20px auto;
+  text-align: left;
+  padding: 10px;
+  border: 2px solid #bf9000; /* Adiciona a borda na cor #bf9000 */
+  border-radius: 5px; /* Arredonda os cantos da borda */
+  background-color: rgba(3, 25, 60, 0.6); /* Fundo com opacidade */
+}
+.Popup-Desligamento {
+  position: static;
+  width: 25%;
+  margin: 20px auto;
+  text-align: left;
+  padding: 10px;
+  border: 2px solid #bf9000; /* Adiciona a borda na cor #bf9000 */
+  border-radius: 5px; /* Arredonda os cantos da borda */
+  background-color: rgba(3, 25, 60, 0.6); /* Fundo com opacidade */
+}
+
+.form {
+  border: 2px solid #bf9000;
+  width: auto;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: left;
+}
+.formularios {
+  display: none;
+  text-align: left;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

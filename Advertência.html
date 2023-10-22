@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Diário Oficial</title>
+    <link rel="icon" type="image/x-icon" href="LSPD_Logo.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Diário de Oficiais</h1>
+    <div class="button-container">
+      <a href="cadete.html"><button>Admissão</button></a>
+      <a href="desligamento.html"><button>Desligamento</button></a>
+      <a href="Readmissão.html"><button>Readmissão</button></a>
+      <a href="Transferência.html"><button>Transferência</button></a>
+      <a href="cf.html"><button>Curso de formação</button></a>
+      <a href="Afastamento.html"><button>Afastamento</button></a>
+      <a href="Advertência.html"><button>Advertência</button></a>
+    </div>
+    <!-- ================================================================ -->
+    <div class="Popup-Desligamento" style="display: block">
+      <div class="Grupo-Quantidade">
+        <form id="meuForm" onsubmit="return false;">
+          <label for="quantidade_Desligamento"
+            >Quantos oficiais levarão advertência?</label
+          ><br /><br />
+          <input
+            type="number"
+            id="quantidade_Desligamento"
+            required
+          /><br /><br />
+          <button type="button" onclick="PopupDesligamento()">Próximo</button>
+        </form>
+      </div>
+      <div class="Grupo-Resultado" style="display: none">
+        <div id="formularios" style="display: none">
+          <h2>Qual a situação da advertência</h2>
+          <select id="situação" onChange="getSituação()">
+            <option value="">Selecione</option>
+            <option value="1">Primeira</option>
+            <option value="2">Segunda</option>
+            <option value="3">Terceira</option></select
+          ><br />
+          <h2>Insira os dados requisitados abaixo</h2>
+          <div id="campos"></div>
+          <button type="button" onclick="motivoDesligamento()">Próximo</button>
+        </div>
+      </div>
+      <div class="Grupo-Motivo" style="display: none">
+        <div id="motivos">
+          <label for="">Motivo:</label><br /><br />
+          <select id="motivo" onChange="getMotivo">
+            <option value="Má utilização de veículos policiais">
+              Má utilização de veículos policiais
+            </option>
+            <option value="Pouso irregular de veículo aéreo">
+              Pouso irregular de veículo aéreo
+            </option>
+            <option value="Má conduta">Má conduta</option>
+            <option value="Quebra de protocolo">Quebra de protocolo</option>
+            <option value="Desrespeito hierárquico">
+              Desrespeito hierárquico
+            </option>
+            <option value="Insubordinação">Insubordinação</option>
+            <option value="Imprudência com arma de fogo">
+              Imprudência com arma de fogo
+            </option>
+            <option value="Utilização indevida de armamentos">
+              Utilização indevida de armamentos
+            </option>
+            <option value="Utilizar veículo sem autorização">
+              Utilizar veículo sem autorização
+            </option>
+            <option value="Acúmulo de viaturas abandonadas">
+              Acúmulo de viaturas abandonadas
+            </option>
+            <option value="Acúmulo de pontos abertos">
+              Acúmulo de pontos abertos
+            </option>
+            <option value="Documentação irregular">
+              Documentação irregular
+            </option>
+            <option value="Proferir informações incorretas">
+              Proferir informações incorretas
+            </option>
+            <option value="Confidencial">Confidencial</option>
+          </select>
+          <br /><br />
+          <div id="motivoGeral">
+            <button type="button" onclick="ResultadoDesligamento()">
+              Exibir Resultado
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="resultado" style="display: none">
+        <div id="resultados"></div>
+      </div>
+    </div>
+    <!-- ================================================================ -->
+
+    <img
+      id="background-image"
+      src="https://media.discordapp.net/attachments/1129097744921940085/1164291666111377408/LSPD_Logo.png?ex=6542ae1c&is=6530391c&hm=bf944e7a44c91e09cad8873d9b01cf38c07d87a6c0b74fd4ecc016a540b9c442&=&width=669&height=671"
+      alt="Background Image"
+    />
+    <!-- ================================================================ -->
+    <script src="Advertência.js"></script>
+  </body>
+</html>
